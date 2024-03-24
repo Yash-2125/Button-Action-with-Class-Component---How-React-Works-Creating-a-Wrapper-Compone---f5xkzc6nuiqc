@@ -3,18 +3,35 @@ import '../styles/App.css';
 
 class App extends Component {
     constructor(props) {
-		super(props);
-	};
+    super(props);
+    this.state = {
+      changer: false,
+    };
+  }
 
-    render() {
-    	return(
-    		<div id="main">
-				{ /* Do not remove this main div!! */ }
-    		</div>
-    	);
-    }
+  displayMessage = () => {
+    this.setState({ changer: true });
+  };
+
+  render() {
+    return (
+      <>
+        <div id="main">
+          {this.state.changer === false ? null : (
+            <p id="para">
+              Hello, I've learnt to use the full-stack evaluation tool. This
+              makes me so happy
+            </p>
+          )}
+          <button id="click" onClick={this.displayMessage}>
+            Click Me
+          </button>
+        </div>
+      </>
+    );
+  }
 }
 
-
 export default App;
+
 
