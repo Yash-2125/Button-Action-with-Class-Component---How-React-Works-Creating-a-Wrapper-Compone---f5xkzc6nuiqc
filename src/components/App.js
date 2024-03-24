@@ -23,7 +23,7 @@ class App extends Component {
               makes me so happy
             </p>
           )}
-          <button id="click" onClick={this.displayMessage}>
+          <button id="click" onclick={this.displayMessage}>
             Click Me
           </button>
         </div>
