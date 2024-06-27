@@ -9,7 +9,7 @@ class App extends Component {
     };
   }
 
-  displayMessage = () => {
+ const displayMessage = () => {
     this.setState({ changer: true });
   };
 
